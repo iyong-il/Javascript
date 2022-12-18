@@ -2,6 +2,10 @@
 .section {
   text-align: center;
   padding: 50px;
+  margin: auto;
+}
+
+.section__container {
   max-width: 1200px;
   margin: auto;
 }
