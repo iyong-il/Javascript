@@ -193,3 +193,49 @@
   transition: all var(--animation-duration) ease;
 }
 /* 프로젝트도 나중에 시도 */
+
+/* Testimonial */
+#testimonials {
+  background: var(--color-light-white);
+}
+
+.testimonials {
+  margin: 40px;
+  text-align: center;
+}
+
+.testimonial {
+  display: flex;
+  margin: 32px 0;
+  justify-content: center;
+}
+
+.testimonial__avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+/* 홀수 */
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+/* 짝수 */
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  padding: 18px;
+  background: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-grey);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-dark-pink);
+}
