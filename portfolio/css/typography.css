@@ -14,7 +14,7 @@ h2 {
 }
 
 h3 {
-  ont-size: var(--font-regular);
+  font-size: var(--font-regular);
   font-weight: var(--weight-regular);
   color: var(--color-black);
   margin: 4px 0;
