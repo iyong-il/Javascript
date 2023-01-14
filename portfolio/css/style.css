@@ -1,11 +1,19 @@
 /* Navbar */
 #navbar {
+  position: fixed;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  background: var(--color-blue);
+  background: transparent;
   align-items: center;
   color: var(--color-white);
   padding: 16px;
+  transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+  background: var(--color-blue);
+  padding: 8px;
 }
 
 .navbar__logo {
@@ -45,6 +53,7 @@
 #home {
   background: url("../images/background.jpg") center/cover no-repeat;
   padding: 40px;
+  padding-top: 120px;
   text-align: center;
 }
 
