@@ -32,7 +32,17 @@ contactMe.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
-// 화면전환 메서드
+// 스크롤 시  화면 fade out
+const home = document.querySelector("#home");
+const homeHeight = home.getBoundingClientRect().height;
+const homeContainer = document.querySelector(".home__container");
+
+document.addEventListener("scroll", () => {
+  homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+// Utilities Function
+// 화면전환 메서드(화살표함수)
 const scrollIntoView = (selector) => {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
