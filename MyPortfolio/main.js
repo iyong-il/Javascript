@@ -41,6 +41,20 @@ document.addEventListener("scroll", () => {
   homeContainer.style.opacity = 1 - window.scrollY / homeHeight;
 });
 
+// 상단으로 올라가기 버튼
+const arrowUp = document.querySelector(".arrow-up");
+document.addEventListener("scroll", () => {
+  if (window.scrollY > homeHeight / 2) {
+    arrowUp.classList.add("visible");
+  } else {
+    arrowUp.classList.remove("visible");
+  }
+});
+
+arrowUp.addEventListener("click", () => {
+  scrollIntoView("#home");
+});
+
 // Utilities Function
 // 화면전환 메서드(화살표함수)
 const scrollIntoView = (selector) => {
