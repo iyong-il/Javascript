@@ -38,8 +38,9 @@
 }
 
 .navbar__menu__item:hover {
-  background: var(--color-dark-pink);
-  font-weight: 700;
+  box-sizing: border-box;
+  background: var(--color-blue);
+  transition: all var(--animation-duration) ease-in-out;
 }
 
 .navbar__toggle-btn {
@@ -94,10 +95,15 @@
   line-height: 170px;
   font-size: 70px;
   margin: auto;
-  color: var(--color-blue);
   border: 1px solid var(--color-blue);
   border-radius: 50%;
   margin-bottom: 16px;
+}
+.major__icon.red {
+  color: var(--color-html5);
+}
+.major__icon.blue {
+  color: var(--color-blue);
 }
 
 .major__icon i {
@@ -157,6 +163,11 @@
   background: var(--color-orange);
 }
 
+.skill__value__iOS {
+  height: 3px;
+  background: var(--color-blue);
+}
+
 .skillset__right {
   flex-basis: 40%;
 }
@@ -167,6 +178,7 @@
 
 .tools {
   background: var(--color-grey);
+  height: 50%;
 }
 
 .tools,
@@ -280,6 +292,10 @@
   margin: 24px;
 }
 
+.contact__email:hover {
+  font-weight: 800;
+  transition: all var(--animation-duration) ease-in;
+}
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-white);
