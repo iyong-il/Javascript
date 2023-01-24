@@ -4,29 +4,26 @@ let chances = 5;
 let selectNumArray = [];
 
 // html에 있는 UI를 가져오기위한 전역변수
-let playButton = document.getElementById("play-button");
-let userInput = document.getElementById("user-input");
-let resultArea = document.getElementById("result-area");
-let resetButton = document.getElementById("reset-button");
-let chanceLabel = document.getElementById("chance-label");
+const playButton = document.getElementById("play-button");
+const userInput = document.getElementById("user-input");
+const resultArea = document.getElementById("result-area");
+const resetButton = document.getElementById("reset-button");
+const chanceLabel = document.getElementById("chance-label");
 
-// html에서 가져온 UI의 이벤트 처리를 위해
-playButton.addEventListener("click", play);
-resetButton.addEventListener("click", reset);
 // 메서드 이름을 따로 만들지 않고 간단하게 만들 수도 있다.
-userInput.addEventListener("focus", function () {
+userInput.addEventListener("focus", () => {
   userInput.value = "";
 });
 
 // 랜덤번호 메서드
-function pickNumber() {
+const pickNumber = () => {
   computerNum = Math.floor(Math.random() * 100) + 1;
   console.log("정답은", computerNum);
   // resultArea.textContent = "";
-}
+};
 
 // Go버튼 메서드
-function play() {
+const play = () => {
   let userValue = userInput.value;
   // console.log(userValue);
 
@@ -57,22 +54,28 @@ function play() {
   if (chances == 0) {
     playButton.disabled = true;
   }
-}
+};
 
 // 리셋버튼 메서드
-function reset() {
+const reset = () => {
   userInput.value = "";
   pickNumber();
-  resultArea.textContent = "결과가 나온다.";
+  resultArea.textContent = "숫자를 입력해 주세요.";
   chances = 5;
   playButton.disabled = false;
-}
+  chanceLabel.textContent = "";
+  selectNumArray = [];
+};
 
 // 기회가 줄어드는 메서드
-function minus(text) {
+const minus = (text) => {
   resultArea.textContent = text;
   chances--;
   chanceLabel.textContent = `남은기회는 ${chances} 번`;
-}
+};
 
 pickNumber();
+
+// html에서 가져온 UI의 이벤트 처리를 위해
+playButton.addEventListener("click", play);
+resetButton.addEventListener("click", reset);
