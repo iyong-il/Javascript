@@ -55,6 +55,13 @@ arrowUp.addEventListener("click", () => {
   scrollIntoView("#home");
 });
 
+//네비바 버튼(반응형) 클릭시 이벤트
+const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
+navbarToggleBtn.addEventListener("click", () => {
+  console.log("토글버튼이 눌렸다.");
+  navbarMenu.classList.toggle("open");
+});
+
 // Utilities Function
 // 화면전환 메서드(화살표함수)
 const scrollIntoView = (selector) => {
