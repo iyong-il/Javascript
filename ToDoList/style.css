@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 40px;
+  /* background: blueviolet; */
+}
+
+.container {
+  background: white;
+  height: 100vh;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 20px;
+}
+
+.title {
+  padding-top: 20px;
+  font-size: 48px;
+}
+
+.input-area {
+  height: 40px;
+  width: 70%;
+}
+
+.plus-button {
+  height: 40px;
+  width: 40px;
+}
+
+.middle {
+  border: 2px solid lightgray;
+  margin-top: 20px;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  border-bottom: 1px solid lightgray;
+}
+
+.menu__item {
+  padding: 10px 1em;
+}
+
+.menu__item:hover {
+  cursor: pointer;
+}
+
+.underline {
+  position: absolute;
+  height: 2px;
+  width: 48px;
+  background: pink;
+  bottom: 1px;
+  left: 7px;
+}
+
+.contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  border-bottom: 1px solid lightgray;
+}
+
+.contents:last-child {
+  border-bottom: none;
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- 제목 -->
+      <h1 class="title">To Do List</h1>
+      <section class="top">
+        <!-- 내용입력란 -->
+        <input type="text" class="input-area" placeholder="오늘의 할일은?" />
+        <!-- 추가버튼 -->
+        <button class="plus-button">+</button>
+      </section>
+      <section class="middle">
+        <!-- 메뉴 -->
+        <div class="menu">
+          <div class="menu__item">모두</div>
+          <div class="menu__item">진행중</div>
+          <div class="menu__item">완료</div>
+          <div class="underline"></div>
+        </div>
+        <!-- 컨텐츠 -->
+        <div class="contents__row"></div>
+      </section>
+    </div>
+  </body>
+</html>
