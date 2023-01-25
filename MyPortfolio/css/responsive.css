@@ -1,4 +1,8 @@
 @media screen and (max-width: 768px) {
+  .section {
+    padding: 16px;
+  }
+
   .navbar__toggle-btn {
     display: block;
   }
@@ -20,17 +24,48 @@
   }
   .about__majors {
     flex-direction: column;
+    margin: 20px 0;
   }
   .major {
-    margin-bottom: 38px;
+    margin: 0;
+  }
+
+  .major:nth-child(odd) {
+    margin-bottom: 10px;
   }
 
   .skillset {
     flex-direction: column;
   }
 
+  .work__categories {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial {
+    flex-direction: column;
+  }
+
+  .testimonial:nth-child(even) {
+    flex-direction: column-reverse;
+  }
+
   .testimonial__avatar {
     width: 80px;
     height: 80px;
+    margin-bottom: 5px;
+  }
+
+  .testimonial__avatar:nth-child(even) {
+    margin-left: 0;
+  }
+  .arrow-up {
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    line-height: 50px;
+    right: 16px;
+    bottom: 16px;
   }
 }
