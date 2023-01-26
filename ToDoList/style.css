@@ -65,3 +65,7 @@ body {
 .contents:last-child {
   border-bottom: none;
 }
+
+.middle-line {
+  text-decoration: line-through;
+}
