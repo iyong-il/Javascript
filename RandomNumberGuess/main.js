@@ -10,13 +10,6 @@ const resultArea = document.getElementById("result-area");
 const resetButton = document.getElementById("reset-button");
 const chanceLabel = document.getElementById("chance-label");
 
-<<<<<<< Updated upstream
-=======
-// html에서 가져온 UI의 이벤트 처리를 위해
-playButton.addEventListener("click", play);
-resetButton.addEventListener("click", reset);
-
->>>>>>> Stashed changes
 // 메서드 이름을 따로 만들지 않고 간단하게 만들 수도 있다.
 userInput.addEventListener("focus", () => {
   userInput.value = "";
