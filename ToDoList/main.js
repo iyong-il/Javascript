@@ -17,7 +17,7 @@ const render = () => {
 
   let result = "";
   for (let i = 0; i < copyList.length; i++) {
-    if (copyList[i].isComplete === true) {
+    if (copyList[i].isComplete) {
       result += `<div class="contents">
       <div class="task__contents" style="text-decoration:line-through;">${copyList[i].taskContents}</div>
       <div class="button">
@@ -37,6 +37,29 @@ const render = () => {
   }
 
   contents.innerHTML = result;
+};
+
+const filter = (e) => {
+  console.log(e.target.id);
+  buttonID = e.target.id;
+  filterList = [];
+  if (buttonID === "all") {
+    render();
+  } else if (buttonID === "going") {
+    for (let i = 0; i < taskList.length; i++) {
+      if (!taskList[i].isComplete) {
+        filterList.push(taskList[i]);
+      }
+    }
+    render();
+  } else if (buttonID === "done") {
+    for (let i = 0; i < taskList.length; i++) {
+      if (taskList[i].isComplete) {
+        filterList.push(taskList[i]);
+      }
+    }
+    render();
+  }
 };
 
 // 플러스버튼을 눌렀을 때
@@ -71,13 +94,18 @@ const toggleCheck = (e) => {
 
 // delete버튼 클릭시
 const deleteButton = (e) => {
+  let copyList = [];
+  if (buttonID === "all") {
+    copyList = taskList;
+  } else if (buttonID === "going" || buttonID === "done") {
+    filterList = taskList;
+  }
   for (let i = 0; i < taskList.length; i++) {
-    if (taskList[i].id === e) {
+    if (copyList[i].id === e) {
       taskList.splice(i, 1);
-      render();
-      return;
     }
   }
+  render();
 };
 
 for (i = 0; i < tabs.length; i++) {
@@ -85,28 +113,5 @@ for (i = 0; i < tabs.length; i++) {
     filter(e);
   });
 }
-
-const filter = (e) => {
-  console.log(e.target.id);
-  buttonID = e.target.id;
-  filterList = [];
-  if (buttonID === "all") {
-    render();
-  } else if (buttonID === "going") {
-    for (let i = 0; i < taskList.length; i++) {
-      if (taskList[i].isComplete === false) {
-        filterList.push(taskList[i]);
-      }
-    }
-    render();
-  } else if (buttonID === "done") {
-    for (let i = 0; i < taskList.length; i++) {
-      if (taskList[i].isComplete === true) {
-        filterList.push(taskList[i]);
-      }
-    }
-    render();
-  }
-};
 
 add.addEventListener("click", addTask);
