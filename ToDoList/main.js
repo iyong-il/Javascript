@@ -98,11 +98,11 @@ const deleteButton = (e) => {
   if (buttonID === "all") {
     copyList = taskList;
   } else if (buttonID === "going" || buttonID === "done") {
-    filterList = taskList;
+    copyList = filterList;
   }
-  for (let i = 0; i < taskList.length; i++) {
+  for (let i = 0; i < copyList.length; i++) {
     if (copyList[i].id === e) {
-      taskList.splice(i, 1);
+      copyList.splice(i, 1);
     }
   }
   render();
