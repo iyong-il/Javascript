@@ -62,6 +62,14 @@ navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
+// 버튼클릭시 이벤트 발생
+const active = document.querySelectorAll("div.work__categories button");
+active.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    console.log(e.target.innerText);
+  });
+});
+
 // Utilities Function
 // 화면전환 메서드(화살표함수)
 const scrollIntoView = (selector) => {
