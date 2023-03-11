@@ -65,16 +65,17 @@ navbarToggleBtn.addEventListener("click", () => {
 // 버튼클릭시 이벤트 발생
 const active = document.querySelectorAll("div.work__categories button");
 active.forEach((button) => {
-  button.addEventListener("click", (e) => {
-    console.log(e.target.innerText);
-    let buttonID = e.target.innerText;
-    if (buttonID.includes("All")) {
-      button.classList.toggle("active");
-    } else if (buttonID.includes("Front-end")) {
-      button.classList.toggle("active");
-    } else {
-      button.classList.toggle("active");
-    }
+  button.addEventListener("click", () => {
+    // console.log(e.target.innerText);
+    // let buttonID = e.target.innerText;
+    button.classList.toggle("active");
+    // if (buttonID.includes("All")) {
+    //   button.classList.toggle("active");
+    // } else if (buttonID.includes("Front-end")) {
+    //   button.classList.toggle("active");
+    // } else {
+    //   button.classList.toggle("active");
+    // }
   });
 });
 
